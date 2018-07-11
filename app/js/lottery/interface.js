@@ -1,5 +1,5 @@
 import $ from 'jquery';
-
+//接口模块
 class Interface {
     /**
      * [getOmit 获取遗漏数据]
