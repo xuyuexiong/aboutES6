@@ -19,7 +19,7 @@ gulp.task('serve', (cb) => {
     })
 
     //监听需要重启服务的文件
-    gulp.watch(['server/routes/**/*.js','server/app.js'],function(){
+    gulp.watch(['server/routes/**/*.js', 'server/app.js'], function () {
         server.start.bind(server)()
     });
 })
