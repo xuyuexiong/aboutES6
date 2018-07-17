@@ -52,4 +52,43 @@ class Base {
             this.number.add(('' + i).padStart(2, '0'));
         }
     }
+
+    /**
+     * [setOmit 设置遗漏数据]
+     * @param {[type]}  omit  [description]
+     */
+    setOmit(omit){
+        let self = this;
+        self.omit.clear();
+        for(let [index,item] of omit.entries()){
+            self.omit.set(index,item)
+        }
+        $(self.omit_el).each(function(index,item){
+            $(item).text(self.omit.get(index))
+        });
+    }
+
+    /**
+     * [setOpenCode 设置开奖]
+     * @param {[type]}  code  [description]
+     */
+    setOpenCode(code){
+        let self = this;
+        self.open_code.clear();
+        for(let item of code.values()){
+            self.open_code.add(item)
+        }
+        self.updateOpenCode && self.updateOpenCode.call(self,code);
+    }
+
+    /**
+     * [toggleCodeActive 号码选中取消]
+     * @param {[type]}  e  [description]
+     */
+    toggleCodeActive(e){
+        let self = this;
+        let $cur = $(e.currentTarget);
+        $cur.toggleClass('btn-boll-active');
+        self.getCount();
+    }
 }
