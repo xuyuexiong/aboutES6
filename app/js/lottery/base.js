@@ -48,7 +48,7 @@ class Base {
      * @return {[type]}      [description]
      */
     initNumber() {
-        for (leti = 1; i < 12; i++) {
+        for (let i = 1; i < 12; i++) {
             this.number.add(('' + i).padStart(2, '0'));
         }
     }
@@ -168,7 +168,7 @@ class Base {
         let active = $active ? $active.length : 0;
         let count = self.computeCount(active, self.cur_play);
         if (count) {
-            self.addCodeItem($active.join(''), self.cur_play, self.play_list.get(self.cur_play).name, count)
+            self.addCodeItem($active.join(' '), self.cur_play, self.play_list.get(self.cur_play).name, count)
         }
     }
 
