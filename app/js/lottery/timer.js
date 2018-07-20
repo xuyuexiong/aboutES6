@@ -42,7 +42,6 @@ class Timer {
             if (r.length || s > 0) {
                 r.push(`<em>${s}</em>秒`);
             }
-
             self.last_time = r.join('');
             update.call(self, r.join(''));
             //每秒轮询一次该方法

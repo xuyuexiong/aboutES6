@@ -221,7 +221,6 @@ class Base {
                 元</em>`
         }
         $('.sel_info').html(tpl);
-
     }
 
     /**

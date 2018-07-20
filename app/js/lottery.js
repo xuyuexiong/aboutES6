@@ -67,10 +67,8 @@ class Lottery extends mix(Base, Calculate, Interface, Timer) {
                 setTimeout(function () {
                     self.updateState();
                     self.getOmit(self.issue).then(function (res) {
-
                     });
                     self.getOpenCode(self.issue).then(function (res) {
-
                     })
                 }, 500);
             })
