@@ -7,7 +7,6 @@ import args from './util/args';
 gulp.task('browser', (cb) => {
     //判断如果不是监听状态下，返回回调函数
     if (!args.watch) return cb();
-
     //监听app目录下的所有js文件，发生变化启动scripts构建脚本
     gulp.watch('app/**/*.js', ['scripts'])
     //监听app目录下的所有ejs文件，发生变化启动scripts构建脚本
