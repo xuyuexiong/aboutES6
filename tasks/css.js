@@ -9,5 +9,4 @@ gulp.task('css', () => {
     return gulp.src('app/**/*.css')
         //拷贝到server/public文件夹
         .pipe(gulp.dest('server/public'))
-
 })

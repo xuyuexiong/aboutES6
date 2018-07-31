@@ -26,6 +26,7 @@ const mix = function (...mixins) {
 }
 
 class Lottery extends mix(Base, Calculate, Interface, Timer) {
+    //构造函数
     constructor(name = 'syy', cname = '11选5', issue = '**', state = '**') {
         super();
         this.name = name;

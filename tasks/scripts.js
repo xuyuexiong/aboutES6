@@ -16,9 +16,7 @@ gulp.task('scripts', () => {
     return gulp.src(['app/js/index.js'])
         //改变默认错误处理机制 
         .pipe(plumber({
-            errorHandler: function () {
-
-            }
+            errorHandler: function () { }
         }))
         //文件重新命名
         .pipe(named())
@@ -43,7 +41,17 @@ gulp.task('scripts', () => {
             extname: '.min.js'
         }))
         //压缩的功能
-        .pipe(uglify({ compress: { properties: false }, output: { 'quote_keys': true } }))
+        .pipe(uglify(
+            { 
+                compress: { 
+                    properties: false 
+                }, 
+                output: { 
+                    'quote_keys': true 
+                } 
+            }
+            )
+        )
         //存储位置设置
         .pipe(gulp.dest('server/public/js'))
         //监听文件，变化之后刷新文件
