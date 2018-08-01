@@ -63,14 +63,14 @@ class Lottery extends mix(Base, Calculate, Interface, Timer) {
             self.state = res.state;
             $(self.issue_el).text(res.issue);
             self.countdown(res.end_time, function (time) {
-                $(self.countdown_el).html(time)
+                $(self.countdown_el).html(time);
             }, function () {
                 setTimeout(function () {
                     self.updateState();
                     self.getOmit(self.issue).then(function (res) {
                     });
                     self.getOpenCode(self.issue).then(function (res) {
-                    })
+                    });
                 }, 500);
             })
         })
