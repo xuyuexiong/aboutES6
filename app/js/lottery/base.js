@@ -194,6 +194,9 @@ class Base {
         self.getTotal();
     }
 
+    /**
+     * [getCount 奖金信息]
+     */
     getCount() {
         let self = this;
         let active = $('.boll-list .btn-boll-active').length;
